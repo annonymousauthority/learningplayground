@@ -1,29 +1,39 @@
 import Link from 'next/link'
 import React from 'react'
+import {HiOutlineVideoCamera} from "react-icons/hi";
+import { CiKeyboard } from "react-icons/ci";
 
-export default function LeftHero() {
+
+export default function leftHero() {
     return (
-        <div className='flex flex-col space-y-6 my-52 ms-20 w-3/5'>
+        <div className='flex flex-col space-y-6 my-32 ms-20 w-2/4'>
 
-            <div className='space-y-6 '>
-                <h1 className='font-normal text-4xl '>
+            <div className='space-y-6 mb-8'>
+                <h1 className='font-normal text-5xl'>
                     Premium video meetings.
                  <br/> Now free for everyone.</h1>
-                <p classNames=" sm:items-center text-center justify center">We re-engineered the service that we built for secure business meetings, Google Meet, to make it free and available for all. </p>
+                <p classNames=" items-center text-center justify center text-3xl W-full"> We re-engineered the service that we built for secure business meetings, <br/>Google Meet, to make it free and available for all.</p>
             </div>
 
-            <div className="flex flex-row gap-7 mt-40">
+            <div className="flex flex-row gap-7">
 
-              <div>
-                <button className="flex justify-center bg-blue-600 text-white text-center py-3 pl-12 pr-3 shadow-sm focus:outline-none text-sm border border-slate-300 rounded-md" > New Meeting </button>
+              <div className='flex space-x-2 items-center'>
+                <HiOutlineVideoCamera className="w-5 h-5 absolute my-5 mx-5 text-white"/>
+                <button className="flex bg-blue-600 text-white text-center py-4 px-12 shadow-sm focus:outline-none text-sm border border-slate-300 rounded-md" >
+                <p className="font-medium">New Meeting</p>
+                    </button>
               </div>
-              <div>
-              <input className="flex bg-white text-black text-left py-3 pl-9 pr-3 shadow-sm focus:outline-none text-sm border border-slate-300 rounded-md" placeholder='Enter Link' type="url" name="search"/>
+
+              <div className='flex -space-x-1 relative items center text-gray-700'>
+              <CiKeyboard className='w-6 h-6 absolute my-4 mx-auto'/>
+              <input className=" bg-white text-black text-left py-4 px-8 shadow-sm focus:outline-none text-sm border border-gray-500 rounded-md font-semibold placeholder-gray-600" placeholder='Enter a code or link' type="url" name="search"
+               />
               </div>
+
             </div>
 
             <div>
-              <hr></hr>
+              <hr className= "w-3/4 border-t-1 border-gray-300 my-2"></hr>
              </div>
 
             <div>
